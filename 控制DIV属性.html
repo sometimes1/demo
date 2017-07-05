@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .parent {
+            text-align: center;
+            margin: 50px;
+        }
+
+        .normal {
+            background: #444;
+            width: 100px;
+            height: 100px;
+            margin: 50px auto;
+        }
+
+        .width {
+            width: 200px;
+        }
+
+        .height {
+            height: 200px;
+        }
+
+        .background {
+            background: red;
+        }
+
+        .display {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <button>变宽</button>
+        <button>变高</button>
+        <button>变色</button>
+        <button>隐藏</button>
+        <button>重置</button>
+        <div class="normal"></div>
+    </div>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $('.parent').on('click', 'button', function (e) {
+            //console.log('监听成功')
+            let $button = $(e.currentTarget);
+            //console.log($button)
+            let $normal = $('.parent > .normal');
+            //console.log($normal)
+            let index = $button.index();
+            //console.log(index)
+            if (index === 0) {
+                $normal.addClass('width')
+            } else if (index === 1) {
+                $normal.addClass('height')
+            } else if (index === 2) {
+                $normal.addClass('background')
+            } else if (index === 3) {
+                $normal.addClass('display')
+            } else if (index === 4) {
+                $normal.removeClass().addClass('normal')
+            }
+        })
+    </script>
+</body>
+
+</html>
