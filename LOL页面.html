@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LOL页面</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: center;
+            height: 90px;
+            width:100%;
+            background: #0b0b0b;
+            position: relative;
+        }
+
+        .topbar .logo {
+            background: transparent url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) no-repeat 0 -27px;
+            width: 190px;
+            height: 100px;
+            margin: 2px 15px;
+            margin-left:-10px;
+        }
+
+        .globalNavigation .top {
+            display: flex;
+            font-size:0;
+            padding-bottom:15px;
+        }
+
+        .globalNavigation .top li {
+            width: 90px;
+            height: 60px;
+            margin: 0 15px;
+            padding-top:30px;
+            text-align: center;
+        }
+
+        .globalNavigation > .top > .pointer{
+            cursor: pointer;
+        }
+        .globalNavigation > .top > .default{
+            cursor:default;
+        }
+        .globalNavigation .top li span {
+            font-size: 18px;
+            color: white;
+        }
+
+        .globalNavigation .top li small {
+            font-size: 10px;
+            color: #666;
+            text-transform: uppercase;
+            font-family: 'Tahoma';
+        }
+
+        .globalNavigation > .subMenu {
+            display: none;
+        }
+
+        .globalNavigation:hover>.subMenu {
+            display: block;
+            margin-top:15px;
+            padding-top:10px;
+            height: 230px;
+            background: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            width: 100%;
+        }
+
+        .globalNavigation > .subMenu > .sub-nav-inner{
+            font-size:14px;
+            display: flex;
+
+        }
+        .globalNavigation > .subMenu > .sub-nav-inner > li{
+            width: 110px;
+            margin: 0 4px;
+            text-align: center;
+        }
+        
+        .globalNavigation > .subMenu > .sub-nav-inner > li>a{
+            display:block;
+            padding-top:10px;
+            color:white;
+            text-decoration: none;
+        }
+        .globalNavigation > .subMenu > .sub-nav-inner > li >a:hover{
+            color:#e9c06c;
+        }
+        .topbar>.icons {
+            display: flex;
+            height: 90px;
+        }
+
+        .topbar>.icons>a.search {
+            width: 27px;
+            height: 27px;
+            margin: 0 10px;
+            margin-top: 25px;
+            background: transparent url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) no-repeat -8px 0;
+        }
+
+        .topbar>.icons>a.mobile {
+            width: 27px;
+            height: 27px;
+            margin: 0 10px;
+            margin-top: 25px;
+            background: transparent url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) no-repeat -45px 0;
+        }
+
+        .userNavigation {
+            display: flex;
+            height: 90px;
+            position: relative;
+        }
+
+        .userNavigation .text {
+            color: white;
+        }
+
+        .userNavigation .icon-top {
+            width: 100px;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .userNavigation>.icon-top>.icon-user {
+            width: 74px;
+            height: 74px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) no-repeat 0 -171px;
+        }
+
+        .userNavigation>.icon-top>.icon-user>img {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+        }
+        .userNavigation> .text{
+            padding-top:20px;
+            margin-left:10px;
+            padding-right:20px;
+        }
+        .userNavigation> .text >p{
+            font-size:16px;
+        }
+        .userNavigation> .text > p> a{
+            color:#dfb257;
+        }
+        .userNavigation> .text >p > small{
+            display:block;
+            font-size:12px;
+            color:#999;
+        }
+        .userNavigation> .text > .popover{
+            display:none;
+            position: absolute;
+            top: 88px;
+            left: 0;
+            width: 100%;
+            color:#666;
+        }
+        .userNavigation> .text > .popover > p{
+            display:flex;
+            justify-content:center;
+        }
+        .userNavigation > .text > .popover > p >span{
+            width: 20em;
+            height: 100px;
+            padding-top:30px;
+        }
+        .userNavigation:hover{
+            background:rgba(27,27,27,0.9);
+        }
+        .userNavigation:hover > .text > .popover{
+            height: 134px;
+            font-size:14px;
+            background:rgba(27,27,27,0.9);
+            display:block;
+        }
+         .userNavigation:hover > .text > .popover > .popover-buttom{
+             color: #e0e0e0;
+             font-size: 12px;
+             text-align:center;
+             background:#161413;
+             line-height: 36px;
+             cursor: pointer;
+         }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="topbar">
+            <div class="logo"></div>
+            <nav class="globalNavigation">
+                <ul class="top">
+                    <li class="pointer">
+                        <span>游戏资料</span>
+                        <small>game info</small>
+                    </li>
+                    <li class="default">
+                        <span>商城/合作</span>
+                        <small>store</small>
+                    </li>
+                    <li class="default">
+                        <span>用户互动</span>
+                        <small>community</small>
+                    </li>
+                    <li class="default">
+                        <span>赛事中心</span>
+                        <small>events</small>
+                    </li>
+                    <li class="default">
+                        <span>自助系统</span>
+                        <small>system</small>
+                    </li>
+                </ul>
+                <div class="subMenu">
+                    <ul class="sub-nav-inner">
+                        <li>
+                            <a href="#" target="_blank">新手指引</a>
+                            <a href="#" target="_blank"><i class="icon-hot"></i>资料库</a>
+                            <a href="#" target="_blank">攻略中心</a>
+                            <a href="#" target="_blank">模式实验室</a>
+                            <a href="#" target="_blank">海克斯战利品库</a>
+                            <a href="#" target="_blank">屏保下载</a>
+                            <a href="#" target="_blank"><i class="icon-new"></i>宇宙官网</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="#"><i class="publicspr ico-h"></i>点券充值</a>
+                            <a target="_blank" href="#">道聚城</a>
+                            <a href="#" target="_blank">周边商城</a>
+                            <a href="#" target="_blank">LOL桌游</a>
+                            <a href="#" target="_blank">LOL信用卡</a>
+                            <a href="#" target="_blank">网吧特权</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">在线客服</a>
+                            <a href="#" target="_blank">视频中心</a>
+                            <a href="#" target="_blank"><i class="icon-hot"></i>活动中心</a>
+                            <a target="_blank" href="#">官方论坛</a>
+                            <a href="#" target="_blank">官方微信</a>
+                            <a href="#" target="_blank">官方微博</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="#"><i class="icon-hot"></i>LPL职业联赛</a>
+                            <a target="_blank" href="#">甲级职业联赛</a>
+                            <a target="_blank" href="#">德玛西亚杯</a>
+                            <a target="_blank" href="#">城市争霸赛</a>
+                            <a target="_blank" href="#">高校联赛</a>
+                            <a target="_blank" href="#">校际精英赛</a>
+                            <a target="_blank" href="#">高校自发赛</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="#">点亮图标</a>
+                            <a target="_blank" href="#">声望系统</a>
+                            <a target="_blank" href="#"><i class="icon-hot"></i>封号查询</a>
+                            <a target="_blank" href="#">体验服申请</a>
+                            <a target="_blank" href="#">服务器状态查询</a>
+                            <a target="_blank" href="#">裁决之镰</a>
+                            <a target="_blank" href="#"><i class="icon-new"></i>峡谷之巅</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="icons">
+                <a href="#" class="search"></a>
+                <a href="#" class="mobile"></a>
+            </div>
+            <div class="userNavigation">
+                <div class="icon-top">
+                    <div class="icon-user">
+                        <img src="http://ossweb-img.qq.com/images/lol/v2/personal/avatar/default.png" alt="用户登录图标">
+                    </div>
+                </div>
+                <div class="text">
+                    <p>亲爱的召唤师，欢迎<a href="#">登录</a></p>
+                    <p>
+                        <small>登录后查看自己的战绩、资产、声望值等</small>
+                    </p>
+                    <div class="popover">
+                        <p><span>登录并且绑定大区后才可查看您的具体信息哦~( 包括战绩、资产、声望值等 )</span></p>
+                        <div class="popover-buttom">
+                        <p>进入个人中心</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>
