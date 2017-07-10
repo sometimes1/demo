@@ -16,11 +16,9 @@
         ul li {
             list-style: none;
         }
-
-        body {
-            min-width: 1240px;
-        }
-
+body{
+    width: 100%;
+}
         .topbar {
             display: flex;
             justify-content: center;
@@ -75,7 +73,6 @@
 
         .globalNavigation>.subMenu {
             display: none;
-            padding-left: 265px;
         }
 
         .globalNavigation:hover>.subMenu {
@@ -87,6 +84,7 @@
             position: absolute;
             width: 100%;
             left: 0;
+            margin-left:265px;
         }
 
         .globalNavigation>.subMenu>.sub-nav-inner {
@@ -255,7 +253,6 @@
             left: 50%;
             top: 0;
             margin-left: -960px;
-            width: 1920px;
             height: 750px;
             opacity: 1;
             z-index: -99;
@@ -264,7 +261,11 @@
         .banner .top-video-1 {
             display: none;
         }
-
+.intro{
+    margin-top:115px;
+    position: absolute;
+    top:0;
+}
         .intro>h1 {
             color: #ffcb60;
             font-size: 50px;
