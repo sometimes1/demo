@@ -20,7 +20,6 @@
         body {
             min-width: 1240px;
             margin: 0 auto;
-            background: #0b0b0b;
             font-family: "Microsoft YaHei", Tahoma, simsun;
         }
 
@@ -259,7 +258,8 @@
         .banner {
             overflow: hidden;
             height: 750px;
-            margin: 0 auto;
+            display:flex;
+            justify-content:center;
             position: relative;
         }
 
@@ -272,7 +272,8 @@
         }
 
         .intro {
-            margin-left:50px;
+            width: 1240px;
+            height: 550px;
             margin-top: 110px;
             position: absolute;
             top: 0;
@@ -305,8 +306,8 @@
 
         .intro>.icon-top-play {
             position: absolute;
-            left: 17%;
-            top: 58%;
+            left: 7.5%;
+            top: 35%;
             width: 35px;
             height: 50px;
             cursor: pointer;
@@ -329,7 +330,7 @@
             border-image-slice: 1;
         }
 
-        .banner>.version {
+        .version {
             position: absolute;
             right: 50px;
             bottom:30px;
@@ -337,13 +338,13 @@
             color: #888787;
         }
 
-        .banner>.version>em {
+        .version>em {
             color: #f5d185;
             margin-right: 10px;
             font-style: normal;
         }
 
-        .banner>.version>a {
+        .version>a {
             text-decoration: none;
             display: inline-block;
             padding: 0 15px;
@@ -479,13 +480,13 @@
                     <i></i>
                 </div>
                 <a href="#">查看详情</a>
-
-            </div>
-            <div class="version">
+<div class="version">
                 当前游戏版本：
                 <em>Ver 7.13</em>
                 <a href="#">版本详情</a>
             </div>
+            </div>
+            
         </div>
         <div class="banner-1">
             <video class="top-video-1" autoplay loop>
