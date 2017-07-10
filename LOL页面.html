@@ -19,15 +19,12 @@
 
         body {
             min-width: 1240px;
-            margin:0 auto;
+            margin: 0 auto;
             overflow: hidden;
             background: #0b0b0b;
             font-family: "Microsoft YaHei", Tahoma, simsun;
         }
 
-        .page {
-            height: 840px;
-        }
 
         .topbar {
             display: flex;
@@ -102,9 +99,9 @@
 
         .globalNavigation>.subMenu>.sub-nav-inner {
             font-size: 14px;
-            display:flex;
+            display: flex;
             width: 650px;
-            transform:translateX(-15%)
+            transform: translateX(-15%)
         }
 
         .globalNavigation>.subMenu>.sub-nav-inner>li {
@@ -262,10 +259,9 @@
 
         .banner {
             width: 1240px;
+            height: 750px;
             margin: 0 auto;
             position: relative;
-
-            height: 750px;
         }
 
         .banner .top-video {
@@ -273,13 +269,7 @@
             left: 50%;
             top: 0;
             margin-left: -960px;
-            height: 750px;
-            opacity: 1;
             z-index: -99;
-        }
-
-        .banner .top-video-1 {
-            display: none;
         }
 
         .intro {
@@ -337,6 +327,38 @@
             color: #c89b3c;
             border-image: linear-gradient(to bottom, #6b5024 0%, #b88d35 100%);
             border-image-slice: 1;
+        }
+
+        .banner>.version {
+            position: absolute;
+            right: 0px;
+            bottom:30px;
+            font-size: 14px;
+            color: #888787;
+        }
+
+        .banner>.version>em {
+            color: #f5d185;
+            margin-right: 10px;
+            font-style: normal;
+        }
+
+        .banner>.version>a {
+            text-decoration: none;
+            display: inline-block;
+            padding: 0 15px;
+            border: 2px solid #f5d185;
+            text-align: center;
+            line-height: 22px;
+            font-size: 12px;
+            color: #f5d185;
+            background: rgba(0, 0, 0, 0.65);
+            border-image: linear-gradient(to bottom, #6b5024 0%, #b88d35 100%);
+            border-image-slice: 1;
+        }
+
+        .banner-1 {
+            display: none;
         }
     </style>
 </head>
@@ -446,10 +468,6 @@
                 <source src="http://ossweb-img.qq.com/images/lol/v2/banner/big-v7.webm" type="video/webm">
                 <source src="http://ossweb-img.qq.com/images/lol/v2/banner/big-v7.mp4" type="video/mp4">
             </video>
-            <video class="top-video-1" autoplay loop>
-                <source src="http://ossweb-img.qq.com/images/lol/v2/banner/back-v7.webm" type="video/webm">
-                <source src="http://ossweb-img.qq.com/images/lol/v2/banner/back-v7.mp4" type="video/mp4">
-            </video>
             <div class="intro">
                 <h2>对决！ 黎明VS黑夜</h2>
                 <p>秩序。混沌。二者相争不绝，无所不用其极。疾风化尽，命数将成。</p>
@@ -461,8 +479,33 @@
                     <i></i>
                 </div>
                 <a href="#">查看详情</a>
+
+            </div>
+            <div class="version">
+                当前游戏版本：
+                <em>Ver 7.13</em>
+                <a href="#">版本详情</a>
             </div>
         </div>
+        <div class="banner-1">
+            <video class="top-video-1" autoplay loop>
+                <source src="http://ossweb-img.qq.com/images/lol/v2/banner/back-v7.webm" type="video/webm">
+                <source src="http://ossweb-img.qq.com/images/lol/v2/banner/back-v7.mp4" type="video/mp4">
+            </video>
+            <div class="intro-1">
+                <h2>对决！ 黎明VS黑夜</h2>
+                <p>秩序。混沌。二者相争不绝，无所不用其极。疾风化尽，命数将成。</p>
+                <video class="act-video-1" autoplay loop>
+                    <source src="http://ossweb-img.qq.com/images/lol/v2/banner/small-v7.webm" type="video/webm">
+                    <source src="http://ossweb-img.qq.com/images/lol/v2/banner/small-v7.mp4" type="video/mp4">
+                </video>
+                <div class="icon-top-play-1">
+                    <i></i>
+                </div>
+                <a href="#">查看详情</a>
+            </div>
+        </div>
+
     </div>
 
 
