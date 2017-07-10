@@ -19,6 +19,7 @@
 body{
     min-width:1240px;
     margin:0 auto;
+    overflow: hidden;
 }
 .page{
 height: 840px;
@@ -77,11 +78,11 @@ height: 840px;
 
         .globalNavigation>.subMenu {
             display: none;
-            padding-left:260px;
+            
         }
 
         .globalNavigation:hover>.subMenu {
-            display: block;
+            display:block;
             margin-top: 15px;
             padding-top: 10px;
             height: 230px;
@@ -95,11 +96,13 @@ height: 840px;
         .globalNavigation>.subMenu>.sub-nav-inner {
             font-size: 14px;
             display: flex;
+            position: absolute;
+            left:19%;
         }
 
         .globalNavigation>.subMenu>.sub-nav-inner>li {
             width: 110px;
-            margin: 0 4px;
+            margin: 0 5px;
             text-align: center;
         }
 
@@ -247,9 +250,10 @@ height: 840px;
 
 
         .banner {
-            width: 100%;
+            width: 1240px;
+            margin:0 auto;
             position: relative;
-            overflow: hidden;
+            
             height: 750px;
         }
 
