@@ -16,14 +16,17 @@
         ul li {
             list-style: none;
         }
-body{
-    min-width:1240px;
-    margin:0 auto;
-    overflow: hidden;
-}
-.page{
-height: 840px;
-}
+
+        body {
+            min-width: 1240px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .page {
+            height: 840px;
+        }
+
         .topbar {
             display: flex;
             justify-content: center;
@@ -77,11 +80,12 @@ height: 840px;
         }
 
         .globalNavigation>.subMenu {
-            display: none;  
+            display: none;
         }
 
         .globalNavigation:hover>.subMenu {
-            display:block;
+            display: block;
+            padding-left: 19%;
             margin-top: 15px;
             padding-top: 10px;
             height: 230px;
@@ -89,8 +93,7 @@ height: 840px;
             position: absolute;
             width: 100%;
             left: 0;
-            z-index:99;
-            padding-left:19%;
+            z-index: 99;
         }
 
         .globalNavigation>.subMenu>.sub-nav-inner {
@@ -249,9 +252,9 @@ height: 840px;
 
         .banner {
             width: 1240px;
-            margin:0 auto;
+            margin: 0 auto;
             position: relative;
-            
+
             height: 750px;
         }
 
@@ -268,19 +271,62 @@ height: 840px;
         .banner .top-video-1 {
             display: none;
         }
-.intro{
-    margin-top:115px;
-    position: absolute;
-    top:0;
-}
+
+        .intro {
+            margin-top: 110px;
+            position: absolute;
+            top: 0;
+        }
+
         .intro>h1 {
             color: #ffcb60;
             font-size: 50px;
-            margin-bottom:10px;
+            padding-bottom:10px;
             font-weight: bold;
             background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 232, 184, 1)), to(rgba(175, 133, 48, 1)));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        .intro>p {
+            color: white;
+            margin-bottom: 25px;
+            width: 550px;
+            height: 60px;
+            font-size: 14px;
+        }
+
+        .intro>.act-video {
+            height: 120px;
+            margin-bottom: 25px;
+            border: 1px solid #987630;
+            background: url(http://ossweb-img.qq.com/images/lol/v2/banner/pic-small-v7.jpg) no-repeat center center;
+        }
+
+        .intro>.icon-top-play {
+            position: absolute;
+            left: 17%;
+            top: 58%;
+            width: 35px;
+            height: 50px;
+            cursor: pointer;
+            background: transparent url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) no-repeat -230px -30px;
+        }
+
+        .intro>a {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            width: 155px;
+            height: 36px;
+            border: 2px solid #bd9440;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.65);
+            font-size: 14px;
+            font-weight: bold;
+            color: #c89b3c;
+            border-image: linear-gradient(to bottom, #6b5024 0%, #b88d35 100%);
+            border-image-slice: 1;
         }
     </style>
 </head>
@@ -401,6 +447,9 @@ height: 840px;
                     <source src="http://ossweb-img.qq.com/images/lol/v2/banner/small-v7.webm" type="video/webm">
                     <source src="http://ossweb-img.qq.com/images/lol/v2/banner/small-v7.mp4" type="video/mp4">
                 </video>
+                <div class="icon-top-play">
+                    <i></i>
+                </div>
                 <a href="#">查看详情</a>
             </div>
         </div>
