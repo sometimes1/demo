@@ -17,11 +17,15 @@
             list-style: none;
         }
 
+        body {
+            min-width: 1240px;
+        }
+
         .topbar {
             display: flex;
             justify-content: center;
             height: 90px;
-            width:100%;
+            width: 100%;
             background: #0b0b0b;
             position: relative;
         }
@@ -31,29 +35,32 @@
             width: 190px;
             height: 100px;
             margin: 2px 15px;
-            margin-left:-10px;
+            margin-left: -10px;
+            z-index: 1;
         }
 
         .globalNavigation .top {
             display: flex;
-            font-size:0;
-            padding-bottom:15px;
+            font-size: 0;
+            padding-bottom: 15px;
         }
 
         .globalNavigation .top li {
             width: 90px;
             height: 60px;
             margin: 0 15px;
-            padding-top:30px;
+            padding-top: 30px;
             text-align: center;
         }
 
-        .globalNavigation > .top > .pointer{
+        .globalNavigation>.top>.pointer {
             cursor: pointer;
         }
-        .globalNavigation > .top > .default{
-            cursor:default;
+
+        .globalNavigation>.top>.default {
+            cursor: default;
         }
+
         .globalNavigation .top li span {
             font-size: 18px;
             color: white;
@@ -66,42 +73,60 @@
             font-family: 'Tahoma';
         }
 
-        .globalNavigation > .subMenu {
+        .globalNavigation>.subMenu {
             display: none;
-            padding-left:265px;
+            padding-left: 265px;
         }
 
         .globalNavigation:hover>.subMenu {
             display: block;
-            margin-top:15px;
-            padding-top:10px;
+            margin-top: 15px;
+            padding-top: 10px;
             height: 230px;
             background: rgba(0, 0, 0, 0.7);
             position: absolute;
             width: 100%;
-            left:0;
+            left: 0;
         }
 
-        .globalNavigation > .subMenu > .sub-nav-inner{
-            font-size:14px;
+        .globalNavigation>.subMenu>.sub-nav-inner {
+            font-size: 14px;
             display: flex;
-
         }
-        .globalNavigation > .subMenu > .sub-nav-inner > li{
+
+        .globalNavigation>.subMenu>.sub-nav-inner>li {
             width: 110px;
             margin: 0 4px;
             text-align: center;
         }
-        
-        .globalNavigation > .subMenu > .sub-nav-inner > li>a{
-            display:block;
-            padding-top:10px;
-            color:white;
+
+        .icon-hot {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            background: transparent url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) no-repeat -107px 0;
+        }
+
+        .icon-new {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            background: transparent url(http://ossweb-img.qq.com/images/lol/v2/spr-v2.png) no-repeat -127px 0;
+        }
+
+        .globalNavigation>.subMenu>.sub-nav-inner>li>a {
+            display: flex;
+            padding-top: 10px;
+            color: white;
             text-decoration: none;
+            justify-content: center;
+            align-items: center;
         }
-        .globalNavigation > .subMenu > .sub-nav-inner > li >a:hover{
-            color:#e9c06c;
+
+        .globalNavigation>.subMenu>.sub-nav-inner>li>a:hover {
+            color: #e9c06c;
         }
+
         .topbar>.icons {
             display: flex;
             height: 90px;
@@ -155,56 +180,100 @@
             height: 58px;
             border-radius: 50%;
         }
-        .userNavigation> .text{
-            padding-top:20px;
-            margin-left:10px;
-            padding-right:20px;
+
+        .userNavigation>.text {
+            padding-top: 20px;
+            margin-left: 10px;
+            padding-right: 20px;
         }
-        .userNavigation> .text >p{
-            font-size:16px;
+
+        .userNavigation>.text>p {
+            font-size: 16px;
         }
-        .userNavigation> .text > p> a{
-            color:#dfb257;
+
+        .userNavigation>.text>p>a {
+            color: #dfb257;
         }
-        .userNavigation> .text >p > small{
-            display:block;
-            font-size:12px;
-            color:#999;
+
+        .userNavigation>.text>p>small {
+            display: block;
+            font-size: 12px;
+            color: #999;
         }
-        .userNavigation> .text > .popover{
-            display:none;
+
+        .userNavigation>.text>.popover {
+            display: none;
             position: absolute;
             top: 88px;
             left: 0;
             width: 100%;
-            color:#666;
+            color: #666;
         }
-        .userNavigation> .text > .popover > p{
-            display:flex;
-            justify-content:center;
+
+        .userNavigation>.text>.popover>p {
+            display: flex;
+            justify-content: center;
         }
-        .userNavigation > .text > .popover > p >span{
+
+        .userNavigation>.text>.popover>p>span {
             width: 20em;
             height: 100px;
-            padding-top:30px;
+            padding-top: 30px;
         }
-        .userNavigation:hover{
-            background:rgba(27,27,27,0.9);
+
+        .userNavigation:hover {
+            background: rgba(27, 27, 27, 0.9);
         }
-        .userNavigation:hover > .text > .popover{
+
+        .userNavigation:hover>.text>.popover {
             height: 134px;
-            font-size:14px;
-            background:rgba(27,27,27,0.9);
-            display:block;
+            font-size: 14px;
+            background: rgba(27, 27, 27, 0.9);
+            display: block;
         }
-         .userNavigation:hover > .text > .popover > .popover-buttom{
-             color: #e0e0e0;
-             font-size: 12px;
-             text-align:center;
-             background:#161413;
-             line-height: 36px;
-             cursor: pointer;
-         }
+
+        .userNavigation:hover>.text>.popover>.popover-buttom {
+            color: #e0e0e0;
+            font-size: 12px;
+            text-align: center;
+            background: #161413;
+            line-height: 36px;
+            cursor: pointer;
+        }
+
+
+
+        .banner {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            height: 750px;
+        }
+
+        .banner .top-video {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            margin-left: -960px;
+            width: 1920px;
+            height: 750px;
+            opacity: 1;
+            z-index: -99;
+        }
+
+        .banner .top-video-1 {
+            display: none;
+        }
+
+        .intro>h1 {
+            color: #ffcb60;
+            font-size: 50px;
+            margin-bottom:10px;
+            font-weight: bold;
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 232, 184, 1)), to(rgba(175, 133, 48, 1)));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
 
@@ -301,20 +370,45 @@
                     <div class="popover">
                         <p><span>登录并且绑定大区后才可查看您的具体信息哦~( 包括战绩、资产、声望值等 )</span></p>
                         <div class="popover-buttom">
-                        <p>进入个人中心</p>
+                            <p>进入个人中心</p>
                         </div>
                     </div>
-                    
+
                 </div>
+            </div>
+        </div>
+        <div class="banner">
+            <video class="top-video" autoplay loop>
+                <source src="http://ossweb-img.qq.com/images/lol/v2/banner/big-v7.webm" type="video/webm">
+                <source src="http://ossweb-img.qq.com/images/lol/v2/banner/big-v7.mp4" type="video/mp4">
+            </video>
+            <video class="top-video-1" autoplay loop>
+                <source src="http://ossweb-img.qq.com/images/lol/v2/banner/back-v7.webm" type="video/webm">
+                <source src="http://ossweb-img.qq.com/images/lol/v2/banner/back-v7.mp4" type="video/mp4">
+            </video>
+            <div class="intro">
+                <h1>对决！ 黎明VS黑夜</h1>
+                <p>秩序。混沌。二者相争不绝，无所不用其极。疾风化尽，命数将成。</p>
+                <video class="act-video" autoplay loop>
+                    <source src="http://ossweb-img.qq.com/images/lol/v2/banner/small-v7.webm" type="video/webm">
+                    <source src="http://ossweb-img.qq.com/images/lol/v2/banner/small-v7.mp4" type="video/mp4">
+                </video>
+                <a href="#">查看详情</a>
             </div>
         </div>
     </div>
 
 
 
-    <script>
-
-    </script>
+    <!--<script>
+$('.video-wrapper > .cover > .icon-play').on('click',function(e){
+    //点击播放
+    let $play = $(e.currentTarget)
+    $play.closest('.video-wrapper').find('video')[0].play()//查找祖先中的第一个.video-wrapper查找video的第一个播放
+    //往上找closest往下找find
+    $play.closest('.cover').hide()//找祖先中的第一个.cover隐藏
+})
+    </script>-->
 </body>
 
 </html>
