@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>传参</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <input type="text" value="北京市">
+    </p>
+    <p>
+        <input type="text" value="朝阳区">
+    </p>
+    <p>
+        <button onclick="aaa()">传参</button>
+    </p>
+    <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $('button').on('click', function () {
+            let value = function (a, b) {
+                alert(a.value);
+                alert(b.value);
+            }
+            let $input = $('body > p > input')
+            value($input[0], $input[1])
+        })
+    </script>
+
+</html>
