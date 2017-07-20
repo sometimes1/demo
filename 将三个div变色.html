@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>将三个div变色</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .body {
+            margin: 0 auto;
+            min-width: 1240px;
+        }
+
+        .parent {
+            text-align: center;
+        }
+
+        .children {
+            display: flex;
+            justify-content: center;
+        }
+
+        .child {
+            width: 100px;
+            height: 100px;
+            background: black;
+            margin: 10px;
+        }
+
+        .active {
+            width: 100px;
+            height: 100px;
+            background: #ddd;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <button class="button">点击将DIV变成灰色</button>
+        <div class="children">
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+        </div>
+    </div>
+    <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $('.parent').on('click', '.button', function (e) {
+            let $button = $(e.currentTarget);
+            let $child = $('.parent > .children > .child');
+            $child.removeClass().addClass('active');
+        })
+    </script>
+</body>
+
+</html>
